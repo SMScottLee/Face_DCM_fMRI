@@ -62,7 +62,7 @@ sub = 'subject_01';
 clearvars -except owd sub sessions subs
 
 %% Coregistration
-for s=11:length(subs)
+for s=1:length(subs)
     sub = subs(s);
     [PS,flags] = spm_select('FPList',fullfile(owd,sub),'^mprage.nii');
     [PF,flags] = spm_select('FPList',fullfile(owd,sub,'/bold/003'),'^meanfMR.*nii');
